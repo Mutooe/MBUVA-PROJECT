@@ -1,0 +1,301 @@
+<html>
+<head>
+<script language="Javascript" src="datetimepicker.js">
+</script>
+<title>Payment</title>
+
+</head>
+<script language="javascript" type="text/javascript" src="datetimepicker.js">
+</script>
+
+<script language="Javascript" type="text/javascript">
+
+/*(A)*/
+function DisplayCourseFee (CourseFeePair) 
+{
+  var CourseFee = CourseFeePair.split('|');
+  var payamount = document.getElementById('payamount').value; // (user input pay amount student pay for course)
+  document.getElementById('coursefee').value = CourseFee[1]; //(display course fee when item is selected)
+}
+
+/*(B)*/
+function DisplayHostelFee (HostelFeePair) 
+{
+  var HostelFee = HostelFeePair.split('|');
+  var hostelamount = document.getElementById('hostelamount').value; // (user input pay amount student pay for hostel)
+  document.getElementById('hostelfee').value = HostelFee[1]; //(display course fee when item is selected)
+}
+
+/*(C)*/
+function DisplaySemFee (SemFeePair) 
+{
+  var SemFee = SemFeePair.split('|');
+  var semamount = document.getElementById('payamount').value; // (user input pay amount)
+  document.getElementById('semfee').value = SemFee[1]; //(display course fee when item is selected)
+}
+
+// Used desired display of following commands
+
+function CalculateFee ()
+ {
+  var CourseFee = document.getElementById('coursefee').value;
+  var payamount = document.getElementById('payamount').value; // (user input pay amount)
+  var balfee = (CourseFee*1) - (payamount*1);
+  document.getElementById('Balance').value = balfee; //automatic display when calculate button is pressed
+
+  var HostelFee = document.getElementById('hostelfee').value;
+  var hostelamount = document.getElementById('hostelamount').value; 
+  var balhostel = (HostelFee*1) - (hostelamount*1);
+  document.getElementById('BalHostel').value = balhostel; //automatic display when calculate button is pressed
+
+  var SemFee = document.getElementById('semfee').value;
+  var balsem = (SemFee*1) - (payamount*1);
+  document.getElementById('BalSem').value = balsem; 
+  
+  var coursepaid = payamount++;
+  document.getElementById('CoursePaid').value = coursepaid; 
+  
+  var totalother = form1.totalothers.value;
+  var amountother = form1.amountothers.value;
+  var balother = totalother - amountother;
+  form1.balothers.value = (balother);
+}
+
+</script>
+<body>
+
+<table width="847" height="60" align="center" cellpadding="0" cellspacing="0" background="drink-4.jpg">
+  <tr>
+	<td colspan="2"><div align="center"><img src="images/image_4.jpg" width="845" height="150" /></div></td>
+  </tr>
+  <tr>
+	<td width="200" rowspan="3" bordercolor="#000000" bgcolor="#66CC00">
+	<div id = "Layer7" align="center"><b> <? echo "<font color='yellow' face='Arial' size='2'><br>
+		<p>MNANDI APPORDERING SYSTEM</p>
+		 </font></b></div></td>
+	<td width="611" bordercolor="#000000" background="images/bckgnd2.gif">&nbsp;</td>
+  </tr>
+  <tr>
+	<td bordercolor="#000000" background="images/bckgnd2.gif"><div align="right">
+	  <table width="200" align="left" cellpadding="0" cellspacing="0">
+		<tr>
+		  <td><div align="center"><span class="style10"><b>WELCOME TO MBUVA</b><?php echo $_SESSION['nama'];?> !! </span></div></td>
+		</tr>
+	  </table>
+	  <a href="index.php" class="style8">[Logout]</a> </div></td>
+  </tr>
+  <tr>
+	<td bordercolor="#000000" background="images/bckgnd2.gif"><table width="648" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+		  <td width="648" class="style8">
+		  <form id="form1" name="form1" method="post" action="paymentcheck.php">
+			<table width="641" border="0" align="center">
+			  <tr>
+				<td colspan="6">
+				<tr>
+					<td colspan="6"><div align="right">
+					  <table width="324" align="left" cellpadding="0" cellspacing="0">
+						<tr>
+						  <td><div align="left">ReceiptNumber : 
+							  <input name="textfield" type="text" size="9" />
+						  </div>							<label>
+							<div align="left"></div>
+							</label></td>
+						</tr>
+					  </table>
+					  Date : 
+					  <input name="date" type="text" id="demo1" size="25" value=>
+					 
+					</div></td>
+				</tr>
+				  <tr>
+				<td colspan="6"><label>
+				  </label></td>
+			  </tr>
+			  <tr bgcolor="#CCFF66">
+				<td colspan="6" bgcolor="#CCFF66"><div align="center"><strong>Student's Details</strong> </div></td>
+				</tr>
+			  <tr>
+				<td width="142" bgcolor="#FFFF99">Student Reg NO</td>
+				<td width="9" bgcolor="#FFFF99">: </td>
+				<td colspan="4" bgcolor="#FFFF99"><label>
+				  <input name="matric" type="text" id="matric" onchange="java script:this.value=this.value.toUpperCase();"/>
+				</label></td>
+				</tr>
+			  <tr>
+				<td bgcolor="#FFFF99"></td>
+				<td bgcolor="#FFFF99">: </td>
+				<td colspan="4" bgcolor="#FFFF99"><label></label>
+				  <label>
+				  <select name="level" id="CourseFee" onchange="DisplayCourseFee(this.value)">
+ 				  <option value="|0">Select Choice</option>
+ 				  <option value="DMT|$3.00">SADZA AND BEEF</option>
+ 				  <option value="DCS|$3.00">SADZA AND CHICKEN</option>
+				  <option value="DMB|$2.50">SADZA AND BEANS</option>
+				  <option value="DMG|$2.00">SADZA AND MATEMBA</option>
+				  <option value="DMK|$3.00">RICE AND CHICKEN</option>
+				  <option value="DMK|$3.50">SADZA AND T-BONE</option>
+				  <option value="DMK|$3.20">RICE AND BEEF </option>
+				  <option value="DMK|$3.00">RICE AND FISH</option>
+				  <option value="DMK|$3.50">RICE AND PORK</option>
+				  <option value="DMK|$1.00">PLAIN BEANS </option>
+				  <option value="DMK|$2.50">SADZA AND CHUNKS</option>
+				  <option value="DMK|$3.00">SADZA AND OFFALS </option>
+				  <option value="DMK|$3.50">PASTA AND CHICKEN </option>
+				  <option value="DMK|$2.00">DRINK </option>
+				  <option value="DMK|$2.00">SADZA AND VEGETABLES</option>
+				  <option value="DMK|$2.00">PLAIN PORK</option>
+				  <option value="DMK|$1.60">PLAIN CHICKEN</option>
+				  
+				  </select>
+				  <span class="style9">*</span></label></td>
+				</tr>
+			  <tr>
+				<td colspan="6" bgcolor="#FFFF99"><label></label></td>
+				</tr>
+			  
+			  <tr>
+				<td colspan="6" bgcolor="#CCFF66"><div align="center"><strong>ORDER SECTION</strong></div></td>
+				</tr>
+			  <tr>
+				<td bgcolor="#FFFF99">PRICE</td>
+				<td bgcolor="#FFFF99">:</td>
+				<td width="190" bgcolor="#FFFF99"><label>
+				  <input name="coursefee" type="text" id="coursefee" readonly="" />
+				</label></td>
+				<td width="108" bgcolor="#FFFF99">Time</td>
+				<td width="5" bgcolor="#FFFF99">:</td>
+				<td width="161" bgcolor="#FFFF99"><label>
+				  <select name="payforsem" id="SemFee" onchange="DisplaySemFee(this.value)">
+ 				  <option value="|0">Select </option>
+ 				  <option value="satu|10:00am">Breakfast</option>
+ 				  <option value="dua|12:00pm">Lunch</option>
+				  <option value="tiga|16:00">Supper</option>
+				  
+				  </select>
+				  <span class="style9">*</span></label></td>
+			  </tr>
+			  <tr>
+				<td bgcolor="#FFFF99">No of Plates</td>
+				<td bgcolor="#FFFF99">:</td>
+				<td bgcolor="#FFFF99"><label>
+				<input name="payamount" type="text" id="payamount" />
+				<span class="style9">*</span></label></td>
+				<td bgcolor="#FFFF99">Open at</td>
+				<td bgcolor="#FFFF99">:</td>
+				<td bgcolor="#FFFF99"><label>
+				  <input name="semfee" type="text" id="semfee" readonly="" />
+				</label></td>
+			  </tr>
+			  <tr>
+				<td bgcolor="#FFFF99">Null</td>
+				<td bgcolor="#FFFF99">:</td>
+				<td bgcolor="#FFFF99"><label>
+				  <input name="balcourse" type="text" id="Balance" readonly=""/>
+				</label></td>
+				<td bgcolor="#FFFF99">All Gweru Dinning Halls</td>
+				<td bgcolor="#FFFF99">:</td>
+				<td bgcolor="#FFFF99"><label>
+				  <input name="balsem" type="text" id="BalSem" readonly="" />
+				</label></td>
+			  </tr>
+			  <tr>
+				<td bgcolor="#FFFF99">Null</td>
+				
+	
+				<td bgcolor="#FFFF99">:</td>
+				<td bgcolor="#FFFF99"><input name="coursepaid" type="text" id="CoursePaid" readonly="" /></td>
+				<td bgcolor="#FFFF99">Select DH</td>
+				<td bgcolor="#FFFF99">:</td>
+				<td bgcolor="#FFFF99"><select name="statussem" id="statussem">
+				  
+				  <option>Main Campus 1</option>
+				  <option>Main Campus 2</option>
+				   <option>China</option>
+				  <option>Japan</option>
+				   <option>Batanai</option>
+				  <option>Telone</option>
+				</select>
+				  <span class="style9">*</span></td>
+			  </tr>
+			  
+			  
+			  <tr>
+				<td colspan="6" bgcolor="#FFFF99">&nbsp;</td>
+			  </tr>
+			  <tr bgcolor="#CCFF66">
+				<td colspan="6"><div align="center"><strong>Continue</strong></div></td>
+				</tr>
+			  <tr>
+				<td bgcolor="#FFFF99">Portion</td>
+				<td bgcolor="#FFFF99">:</td>
+				<td bgcolor="#FFFF99"><label>
+				  <select name="roomtype" id="HostelFee" onchange="DisplayHostelFee(this.value)">
+ 				 <option value="DMK|None">None</option>
+ 				  <option value="SE|Less food">Very Small</option>
+ 				  <option value="DE|Average food">Small</option>
+ 				  <option value="DA|Normal food">Medium</option>
+ 				  <option value="QD|More food">Large</option>
+				  <option value="QD|Etxra food">Extra Large</option>
+				  
+				  </select>
+				  <span class="style9">*</span></label></td>
+				<td bgcolor="#FFFF99">Extra Info</td>
+				<td bgcolor="#FFFF99">:</td>
+				<td bgcolor="#FFFF99"><label>
+				  <input name="roomnumber" type="text" id="roomnumber" />
+				  <span class="style9"></span></label></td>
+			  </tr>
+			  <tr>
+				<td bgcolor="#FFFF99">Null</td>
+				<td bgcolor="#FFFF99">:</td>
+				<td bgcolor="#FFFF99"><label>
+				<input name="hostelfee" type="text" id="hostelfee" readonly="" />
+				</label></td>
+				<td bgcolor="#FFFF99">Leave Empty</td>
+				<td bgcolor="#FFFF99">:</td>
+				<td bgcolor="#FFFF99"><label>
+				  <input name="block" type="text" id="block" />
+				  <span class="style9"></span></label></td>
+			  </tr>
+			  
+			
+			<script type="text/javascript">
+
+  initInputHighlightScript();
+
+</script>
+			</form>		  
+			
+
+	</td>
+		</tr>
+		
+		
+	  </table>
+	</td>
+  </tr>
+</table>
+<script type="text/javascript">
+
+function confSubmit(form) {
+if (confirm("Are you sure you want to submit the form?")) {
+form.submit();
+}
+
+else {
+alert("You decided to not submit the form!");
+}
+}
+</script>
+</head>
+<body>
+
+<form action="order.html" method="POST">
+<!--Put form elements here-->
+
+<input type="button" onClick="confSubmit(this.form);" value="Submit Form">
+</form>
+
+</body>
+</html>

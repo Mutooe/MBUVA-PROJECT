@@ -1,0 +1,649 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+        <!-- META -->
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+        <!-- TITLE -->
+        <title>MNANDI: Front Page</title>
+
+        <!-- Main StyleSheet -->
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link href="style-responsive.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
+        <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+        <link rel="stylesheet" href="css/libs/animate.css">
+
+
+		<!-- bxSlider CSS file -->
+        <link href="css/jquery.bxslider.css" rel="stylesheet" />
+
+
+        <!-- LayerSlider stylesheet -->
+        <link rel="stylesheet" href="layerslider/css/layerslider.css" type="text/css">
+        <!-- External libraries: jQuery & GreenSock -->
+        <script src="layerslider/js/jquery.js" type="text/javascript"></script>
+        <script src="layerslider/js/greensock.js" type="text/javascript"></script>
+        <!-- LayerSlider script files -->
+        <script src="layerslider/js/layerslider.transitions.js" type="text/javascript"></script>
+        <script src="layerslider/js/layerslider.kreaturamedia.jquery.js" type="text/javascript"></script>
+        
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        
+
+		<!-- bxSlider Javascript file -->
+        <script src="js/jquery.bxslider.js"></script>
+        <script>
+		$(document).ready(function(){
+		$('.bxslider').bxSlider({
+								
+								pager: false,
+								controls: true,
+								auto: true
+								
+								
+								});
+		});
+		</script>
+
+
+
+		<link rel="stylesheet" type="text/css" href="lightbox/jquery.fancybox.css" media="screen" />
+		<script src="lightbox/jquery.fancybox.js"></script>
+        <script type="text/javascript">
+                $(document).ready(function() {
+                                           
+                    $('.fancybox').fancybox();
+ 		
+                });
+        </script>
+
+
+        <!-- GOTO TOP JQUERY -->
+        <script type="text/javascript">
+        $(function() {
+            $(window).scroll(function() {
+                if($(this).scrollTop() != 0) {
+                    $('#gotop').fadeIn();	
+                } else {
+                    $('#gotop').fadeOut();
+                }
+            });
+         
+            $('#gotop').click(function() {
+                $('body,html').animate({scrollTop:0},800);
+            });	
+        });
+        </script>
+            
+
+
+		<!-- HEADER JQUERY -->
+        <script type="text/javascript">
+        $(function() {
+            $(window).scroll(function() {
+                if($(this).scrollTop() >= 200) {
+                    $('.header').addClass("header_fix");	
+                } else {
+                   $('.header').removeClass("header_fix");
+                }
+            });	
+        });
+        </script>
+        
+        
+        <script type="text/javascript">
+        
+		if($(window).width() <= 900){
+		$(document).ready(function() {
+                                    
+									
+									
+                    $('.mobile .title').click(function() {
+												
+												$(this).next("ul").slideToggle();
+												$(this).toggleClass("minus");
+												
+												});
+					
+					
+ 		
+                });
+		
+		}
+        </script>
+                            
+</head>
+
+<body>
+        
+        
+    
+        <div class="header">
+        <div class="container">
+        
+        			<a href="#" class="logo"><img src="images/logo.png" alt="" /></a>
+                    <a href="#" class="logo"><img src="images/mbuva.png" alt="" /></a>
+                    <br> </br>
+                    <br> </br>
+                    <div class="nav mobile">
+                    <div class="title">Menu <span class="fa "></span></div>
+                    <ul>
+                    <li><a href="#faqs_part">FAQs</a></li>
+                    <li><a href="bus_timetable.html">BUS SCHEDULE</a></li>
+                    <li><a href="Gold.htm">GOLD CARD</a></li>
+                    <li><a href="mbuva.html">FOOD LIST</a></li>
+                    <li><a href="#contact_part">CONTACT</a></li>
+                    <li><a href="loginform.html">SIGN UP</a></li>
+                    </ul>
+                    </div>
+        
+        </div>
+        </div>
+        
+        
+
+
+		<div class="wrapper">
+        <div class="slider_main">
+        <div id="full-slider-wrapper">
+        <div id="layerslider" style="width:100%;height:473px;">
+        
+        
+                                <div class="ls-slide" data-ls="transition2d:1;timeshift:-1000;">
+                                <img src="images/slider/slide-bg.jpg" class="ls-bg" alt="Slide background"/>
+                                
+                                
+                                <div class="ls-l videopreview" style="top:87px;left:0px;white-space: nowrap;" data-ls="offsetxin:-200;durationin:2000;offsetxout:-200;">
+                                <!--<iframe src="http://player.vimeo.com/video/34134308?portrait=0&amp;color=ff9933&autoplay=1" width="443" height="290" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
+                                <img src="images/player.jpg" alt="" />
+                                </div>
+                                
+                                
+                                <div class="ls-l" style="top:140px;left:638px;white-space: nowrap;" data-ls="offsetxin:0;delayin:1000;easingin:easeInOutQuart;scalexin:0.7;scaleyin:0.7;offsetxout:-800;durationout:1000;">
+                                <h2 class="l1">MNANDI!!!</h2>
+                                </div>
+                                
+                                <div class="ls-l" style="top:200px;left:583px;white-space: nowrap;" data-ls="offsetxin:0;delayin:1000;easingin:easeInOutQuart;scalexin:0.7;scaleyin:0.7;offsetxout:-800;durationout:1000;">
+                                <h2 class="l2">WE ARE HERE FOR YOU!</h2>
+                                </div>
+                                
+                            
+                                
+                                <div class="ls-l" style="top:265px;left:598px;" data-ls="offsetxin:0;delayin:1000;easingin:easeInOutQuart;scalexin:0.7;scaleyin:0.7;offsetxout:-800;durationout:1000;">
+                                <a href="#" class="button2">Learn More</a>
+                                </div>
+                                
+                                
+                                <div class="ls-l" style="top:265px;left:810px;" data-ls="offsetxin:0;delayin:1000;easingin:easeInOutQuart;scalexin:0.7;scaleyin:0.7;offsetxout:-800;durationout:1000;">
+                                <a href="#" class="button1">Start Now</a>
+                                </div>
+                                
+                               
+                                </div><!--FIRST SLIDE-->
+                                
+                                
+                                
+                                <div class="ls-slide" data-ls="transition2d:1;timeshift:-1000;">
+                                <img src="images/slider/slide-bg.jpg" class="ls-bg" alt="Slide background"/>
+                                
+                                
+                                <div class="ls-l videopreview" style="top:87px;left:0px;white-space: nowrap;" data-ls="offsetxin:-200;durationin:2000;offsetxout:-200;">
+                                <!--<iframe src="http://player.vimeo.com/video/34134308?portrait=0&amp;color=ff9933&autoplay=1" width="200" height="290" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
+                                <img src="images/player1.jpg" alt="" />
+                                </div>
+                                
+                                
+                                <div class="ls-l" style="top:140px;left:638px;white-space: nowrap;" data-ls="offsetxin:0;delayin:1000;easingin:easeInOutQuart;scalexin:0.7;scaleyin:0.7;offsetxout:-800;durationout:1000;">
+                                <h2 class="l1">MNANDI!!!</h2>
+                                </div>
+                                
+                                <div class="ls-l" style="top:200px;left:583px;white-space: nowrap;" data-ls="offsetxin:0;delayin:1000;easingin:easeInOutQuart;scalexin:0.7;scaleyin:0.7;offsetxout:-800;durationout:1000;">
+                                <h2 class="l2">WE ARE HERE FOR YOU!</h2>
+                                </div>
+                                
+                            
+                                
+                                <div class="ls-l" style="top:265px;left:598px;" data-ls="offsetxin:0;delayin:1000;easingin:easeInOutQuart;scalexin:0.7;scaleyin:0.7;offsetxout:-800;durationout:1000;">
+                                <a href="#" class="button2">Learn More</a>
+                                </div>
+                                
+                                
+                                <div class="ls-l" style="top:265px;left:810px;" data-ls="offsetxin:0;delayin:1000;easingin:easeInOutQuart;scalexin:0.7;scaleyin:0.7;offsetxout:-800;durationout:1000;">
+                                <a href="#" class="button1">Start Now</a>
+                                </div>
+                                
+                               
+                                </div><!--FIRST SLIDE-->
+                                
+                     
+           
+			
+        </div>
+        </div> 
+        </div>
+
+
+
+
+        <div class="service_section">
+        <div class="container">
+        
+        			<h2>Look at our services</h2>
+                    <h4>One application that caters not only for food but also other campus services</h4>
+                    
+                    <div class="insider">
+                   
+                   		<div class="column">
+                        <span class="fa fa-mobile"></span>
+                        <h3>Phone Application </h3>
+                        <p>Coming Soon!</p>
+                        </div>
+                        
+                        <div class="column">
+                        <span class="fa fa-comment-o"></span>
+                        <h3>Customer support</h3>
+                        <p>For more questions. Please contact us</p>
+                        </div>
+                        
+                        <div class="column">
+                       	<span class="fa fa-heart-o"></span>
+                        <h3>Leave a heart </h3>
+                        <p>Share with your friends for a much more large group.</p>
+                        </div>
+                   
+                    </div>
+        
+        </div>
+        </div>
+        
+        
+        
+        
+        
+        <div class="feature_section" id="features">
+        <div class="container">
+        
+        				
+                        <div class="leftside">
+                        <img src="images/thumbs/meat.jpg" alt=""  class="wow bounceInLeft animated" data-wow-duration="2s" data-wow-offset="300" data-wow-delay="0.2s" />
+                        </div>
+                        
+                        
+                        <div class="rightside">
+                        <h2>Explore the awesomeness</h2>
+                        <p>
+                        Order your food.
+                        See the available menus in each dining hall.
+                        Go the right direction.
+                        See the bus schedules and travel the right time.
+                        
+                        SAVE ENERGY AND SAVE TIME.
+                        </p>
+                        
+                        <div class="feature">
+                        <span class="fa fa-life-ring"></span>
+                        <div class="description">
+                        <strong>Good in Performance</strong> <br />
+                        Fast and efficent way to go about your day.
+                        </div>
+                        </div>
+                        
+                        <br clear="all" />
+                        
+                        <a href="#" class="button3">Learn More</a>
+                        <a href="#" class="button4">Start Now</a>
+                        </div>			
+        
+        </div>
+        </div>
+        
+        
+        
+        
+        
+        <div class="feature_section ano_feature_section">
+        <div class="container">
+        
+        				
+                        <div class="leftside">
+                        <h2>MORE ABOUT MNANDI</h2>
+                        <p>
+                        On campus operation for your enjoyment. Go to the right dinning hall with the food you want. Instead of taking chances going about the school premises trying to figure out where the meal you want is. MNANDI APPlets you know where your desired course is.
+                        </p>
+                        
+                        <div class="feature">
+                        <span class="fa fa-life-ring"></span>
+                        <div class="description">
+                        <strong>Transport</strong> <br />
+                        Tired of missing the bus? Meet the all new bus timetable. Know what time the bus is around and not wait for hours missing lectures.
+                        </div>
+                        </div>
+                        
+                        <div class="feature">
+                        <span class="fa fa-play-circle-o "></span>
+                        <div class="description">
+                        <strong>Time Management </strong> <br />
+                        Time is money and money is not meant to be wasted but invested.
+                        </div>
+                        </div>
+                        
+                        </div>
+                        
+                        
+                        <div class="rightside">
+                        <img src="images/thumbs/bus.jpg" alt="" class="wow bounceInRight animated imagethumb2" data-wow-offset="300" data-wow-delay="0.2s" />
+                        </div>			
+        
+        </div>
+        </div>
+        
+        
+        
+        
+        <div class="common_section" id="faqs_part">
+        <div class="container">
+        
+        			<h2>Frequently Asked Questions</h2>
+                    <h4>ONE APPLICATION THAT CATERS NOT ONLY FOR FOOD BUT ALSO OTHER CAMPUS SERVICES</h4>
+                    
+                    
+                    <div class="faqbox">
+                    <div class="title">Will the drivers be able to bring us good time management?</div>
+                    <p>
+                    Yes! The circumastances force them to keep the time as good as it is supposed to be. That means you are never going to be late.
+                    </p>
+                    </div>
+                    
+                    <div class="faqbox longer">
+                    <div class="title">Is there a phone application?</div>
+                    <p>
+                     We are working on the phone application and it is to be launched as soon as it is fully functional and has no more glitches.
+                    </p>
+                    </div>
+                    
+                    
+                    <div class="faqbox">
+                    <div class="title">How does the food thing work?</div>
+                    <p>
+                   Each campus dinning hall will upload the menus they have on a particular day. This way you know where you are finding your meal.
+                    </p>
+                    </div>
+                    
+                    
+                    <div class="faqbox">
+                    <div class="title">Is this application available to everyone?</div>
+                    <p>
+                    Yes! All students at Midlands State University have access to the site.
+                    </p>
+                    </div>
+                    
+                    
+                    <div class="faqbox">
+                    <div class="title">Do i need to register to use the site?</div>
+                    <p>
+                    Yes! You get to create an account and be part of the team.
+                    </p>
+                    </div>
+                    
+                    
+        
+        </div>
+        </div>
+        
+        
+        
+        
+        <div class="common_section" id="testimonials_part">
+        <div class="container">
+        
+        			<h2>Trusted by MSU</h2>
+                    <h4 style="margin:0 0 40px 0;">ONE APPLICATION THAT CATERS NOT ONLY FOR FOOD BUT ALSO OTHER CAMPUS SERVICES</h4>
+                    
+                   
+                   	<br clear="all" />
+                    
+                    <ul class="bxslider">
+                    
+                    <li>
+                    <div class="testimonial_box">
+                    <div class="quote_button"><img src="images/logo.png" alt="" /></div>
+                    <div class="para">
+                    DETERMINATION MAKES EVERYTHING WORK. JUST PUT IN THE SWEAT AND RESULTS WILL BE FRUITFUL.
+                    </div>
+                    <div class="clientinfo">
+                    <img src="images/logo.png" alt="" />
+                    MNANDI APPTeam
+                    </div>
+                    </div>
+                    </li>
+                    
+                    </ul>
+                    
+        
+        </div>
+        </div>
+        
+        
+        
+        
+        
+        <div class="pricing_table_section" id="pricing_part">
+        <div class="container">
+        
+        			<h2>JOIN US</h2>
+                    <h4>MAKE THE FAMILY GROW!!!</h4>
+                    
+                   
+                   	<div class="insider">
+                    
+                    
+                    <div class="block">
+                    <div class="head">
+                    <h2>STUDENTS</h2>
+                    <p>Covered for the  <strong>whole semester</strong> without any inconviniences.</p>
+                    </div>
+                    <ul>
+                    <li>Total Users <span>More than 1000+ </span></li>
+                    <li>Daily Updates <span><img src="images/icons/i8.png" alt="" /></span></li>
+                    <li>Bus Timetable<span><img src="images/icons/i8.png" alt="" /></span></li>
+                    <li>Gold Card Services <span><img src="images/icons/i8.png" alt="" /></span></li>
+                    <li>Customer Service <span><img src="images/icons/i8.png" alt="" /></span></li>
+                    <li>Online Order <span><img src="images/icons/i9.png" alt="" /></span></li>
+                    <li><h5>Join Mnandi</h5> <a href="#" class="button5">SIGN UP</a></li>
+                    </ul>
+                    </div>
+                    
+                    
+                     <div class="block">
+                    <div class="head">
+                    <h2>LECTURER</h2>
+                    <p>Covered for the  <strong>whole year</strong> without any inconviniences.</p>
+                    </div>
+                    <ul>
+                    <li>Total Users <span>More than 20+ </span></li>
+                    <li>Daily Updates <span><img src="images/icons/i8.png" alt="" /></span></li>
+                    <li>Bus Timetable<span><img src="images/icons/i8.png" alt="" /></span></li>
+                    <li>Gold Card Services <span><img src="images/icons/i8.png" alt="" /></span></li>
+                    <li>Customer Service <span><img src="images/icons/i8.png" alt="" /></span></li>
+                    <li>Online Order <span><img src="images/icons/i8.png" alt="" /></span></li>
+                    <li><h5>Join Mnandi</h5> <a href="#" class="button5">SIGN UP</a></li>
+                    </ul>
+                    </div>
+                    
+                    
+                    
+                   <div class="block">
+                    <div class="head">
+                    <h2>MSU GUESTS</h2>
+                    <p>Covered for the  <strong>whole year</strong> without any inconviniences.</p>
+                    </div>
+                    <ul>
+                    <li>Total Users <span>More than 15+ </span></li>
+                    <li>Daily Updates <span><img src="images/icons/i9.png" alt="" /></span></li>
+                    <li>Bus Timetable<span><img src="images/icons/i9.png" alt="" /></span></li>
+                    <li>Gold Card Services <span><img src="images/icons/i9.png" alt="" /></span></li>
+                    <li>Customer Service <span><img src="images/icons/i8.png" alt="" /></span></li>
+                    <li>Online Order <span><img src="images/icons/i8.png" alt="" /></span></li>
+                    <li><h5>Join Mnandi</h5> <a href="#" class="button5">SIGN UP</a></li>
+                    </ul>
+                    </div>
+                    
+                    
+                    </div>
+                    
+        
+        </div>
+        </div>
+        
+        
+        
+        
+        <div class="common_section" id="contact_part">
+        <div class="container">
+        
+        			<h2>Get in touch with us</h2>
+                    <h4>Want to know more?</h4>
+                    
+                   
+                   	<br clear="all" />
+                    
+                    
+                    <form method="post" class="hpform">
+                    <input type="text" placeholder="Name" />
+                    <input type="email" placeholder="Email" />
+                    <textarea placeholder="Message"></textarea>
+                    <input type="submit" value="SEND" />
+                    </form>
+                    
+                   
+                    
+        
+        </div>
+        </div>
+        
+        
+        
+        
+        <div class="subscribe_section" id="subscribe_part">
+        <div class="container">
+        
+        			<h2>Subscribe to our newsletter and updates</h2>
+                    
+                   
+                   	<br clear="all" />
+                    
+                    
+                    <form method="post">
+                    <input type="email" placeholder="Enter your email address" />
+                    <input type="submit" value="SUBSCRIBE" />
+                    </form>
+                    
+                   
+                    
+        
+        </div>
+        </div>
+        
+        
+        
+        
+        <div class="common_section">
+        <div class="container">
+        
+        	
+            		<a href="#" class="footer_logo"><img src="images/logo.png" alt="" /></a>
+                   
+					<div class="copyright">Copyright 2019 All Rights Reserved - MNANDI</div>                    
+        
+        </div>
+        </div>
+        
+        
+        </div><!--wrapper-->
+
+
+		<script>
+            jQuery("#layerslider").layerSlider({
+                responsive: false,
+                responsiveUnder: 1100,
+                layersContainer: 1100,
+                skin: 'fullwidth',
+                hoverPrevNext: false,
+                skinsPath: 'layerslider/skins/'
+            });
+        
+        
+        </script>
+
+		<script src="js/wow.js"></script>
+        <script>
+        wow = new WOW(
+          {
+            animateClass: 'animated',
+            offset:       100
+          }
+        );
+        wow.init();
+        document.getElementById('moar').onclick = function() {
+          var section = document.createElement('section');
+          section.className = 'section--purple wow fadeInDown';
+          this.parentNode.insertBefore(section, this);
+        };
+        </script>
+
+		<script type="text/javascript">
+		$(function() {
+		$('a[href*=#]:not([href=#])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		var target = $(this.hash);
+		target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		if (target.length) {
+		$('html,body').animate({
+		scrollTop: target.offset().top - 132
+		}, 2000);
+		return false;
+		}
+		}
+		});
+		});
+        </script>
+        
+        
+		<script type="text/javascript">
+        
+        
+        $(document).ready(function() {
+        
+        if($(window).width() <= 1200){
+        
+        
+        $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+        $('html,body').animate({
+        scrollTop: target.offset().top - 132
+        }, 2000);
+        return false;
+        }
+        }
+        });
+        });
+        
+        
+        
+        }
+        
+        });
+        
+        
+        </script> 
+             
+
+		
+</body>
+</html>
